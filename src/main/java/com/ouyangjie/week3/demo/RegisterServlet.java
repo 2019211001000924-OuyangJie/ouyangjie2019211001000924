@@ -115,6 +115,7 @@ public class RegisterServlet extends HttpServlet {
 //            request.getRequestDispatcher("userList.jsp").forward(request,response);
 //            System.out.println("跳转页面完成");
             response.sendRedirect("Login.jsp");
+            
         } catch (Exception e) {
             System.out.println(e);
         }
