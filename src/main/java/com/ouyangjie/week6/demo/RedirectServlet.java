@@ -11,12 +11,12 @@ public class RedirectServlet extends HttpServlet {
 
         System.out.println("before redirect");
 //        response.sendRedirect("index.jsp");
-//        http://localhost:8080/2019211001000924ouyangjie_war_exploded/redirect
+//        http://localhost:8080/2019211001000916Ganzhou_war_exploded/redirect
 //        http://localhost:8080/index.jsp
         System.out.println("after redirect");
-//        http://localhost:8080/2019211001000924ouyangjie_war_exploded/redirect
+//        http://localhost:8080/2019211001000916Ganzhou_war_exploded/redirect
 //        http://localhost:8080/index.jsp
-//        http://localhost:8080/2019211001000924ouyangjie_war_exploded/index.jsp
+//        http://localhost:8080/2019211001000916Ganzhou_war_exploded/index.jsp
 
         response.sendRedirect("http://www.baidu.com/");
     }

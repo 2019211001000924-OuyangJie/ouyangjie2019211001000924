@@ -22,3 +22,4 @@
 <%--<a href="redirect">redirect-week6</a></br>--%>
 <%--<a href="search">search-week6</a></br>--%>
 <%@include file="footer.jsp"%>
+© 2021 GitHub, Inc.
