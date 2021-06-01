@@ -1,4 +1,3 @@
-
 <%@include file="header.jsp" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <section>
@@ -30,11 +29,11 @@
 						<div class="well">
 							<input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600"
 								   data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br/>
-                            <b>$ 0</b> <b class="pull-right">$ 600</b>
-                        </div>
-                    </div><!--/price-range-->
+							<b>$ 0</b> <b class="pull-right">$ 600</b>
+						</div>
+					</div><!--/price-range-->
 
-                    <div class="shipping text-center"><!--shipping-->
+					<div class="shipping text-center"><!--shipping-->
 						<img src="images/home/shipping.jpg" alt=""/>
 					</div><!--/shipping-->
 
@@ -57,23 +56,23 @@
 									<a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
 
 								</div>
-                                <div class="item">
-                                    <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-                                    <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-                                    <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+								<div class="item">
+									<a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+									<a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+									<a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
 
-                                </div>
-                                <div class="item">
-                                    <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-                                    <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-                                    <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-                                </div>
+								</div>
+								<div class="item">
+									<a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+									<a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+									<a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+								</div>
 
-                            </div>
+							</div>
 
-                            <!-- Controls -->
-                            <a class="left item-control" href="#similar-product" data-slide="prev">
-                                <i class="fa fa-angle-left"></i>
+							<!-- Controls -->
+							<a class="left item-control" href="#similar-product" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
 							</a>
 							<a class="right item-control" href="#similar-product" data-slide="next">
 								<i class="fa fa-angle-right"></i>
@@ -104,10 +103,10 @@
 							<!-- <p><b>Availability:</b> In Stock</p>
                             <p><b>Condition:</b> New</p>
                             <p><b>Brand:</b> E-SHOPPER</p> -->
-                            <a href=""><img src="images/product-details/share.png" class="share img-responsive" alt=""/></a>
-                        </div><!--/product-information-->
-                    </div>
-                </div><!--/product-details-->
+							<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt=""/></a>
+						</div><!--/product-information-->
+					</div>
+				</div><!--/product-details-->
 
 				<div class="category-tab shop-details-tab"><!--category-tab-->
 					<div class="col-sm-12">
