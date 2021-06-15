@@ -1,6 +1,8 @@
+<%@ page import="java.sql.SQLException" %>
 <%@include file="../header.jsp" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
 <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
 <script>
     $(document).ready(function () {
@@ -72,40 +74,45 @@
                 <tbody>
 
                 <!-- loop_start -->
-
+                <C:forEach var="o" items="${orderList}">
                 <tr>
-                    <td>OID:order Id</td>
-                    <td>order Date</td>
+                    <td>OID:${o.orderId}</td>
+                    <td>${o.orderDate}</td>
                     <%
-                        com.yinxingyu.model.Order o = (com.yinxingyu.model.Order) pageContext.findAttribute("o");
+                        com.ouyangjie.model.Order o = (com.ouyangjie.model.Order) pageContext.findAttribute("o");
                         int userId = o.getCustomerId();
                         java.sql.Connection con = (java.sql.Connection) application.getAttribute("con");
-                        com.yinxingyu.dao.UserDao userDao = new com.yinxingyu.dao.UserDao();
-                        String customerName = userDao.findById(con, userId).getUsername();
+                        com.ouyangjie.dao.UserDao userDao = new com.ouyangjie.dao.UserDao();
+                        String customerName = null;
+                        try {
+                            customerName = userDao.findById(con, userId).getUsername();
+                        } catch (SQLException throwables) {
+                            throwables.printStackTrace();
+                        }
                     %>
                     <td><%=customerName %>
                     </td>
                     <td>
-                        <p>first Name last Name
+                        <p>${o.firstName} ${o.lastName}
                         <p>
-                        <p> address1</p>
-                        <p>address2</p>
-                        <p>city,state,country-postalCode</p>
-                        <p>phone</p></td>
+                        <p> ${o.address1}</p>
+                        <p>${o.address2}</p>
+                        <p>${o.city},${o.state},${o.country}-${o.postalCode}</p>
+                        <p>${o.phone}</p></td>
                     <td class="cart_total">
                         <%
                             int n = o.getPaymentId();
-                            String paymentType = com.yinxingyu.model.Payment.findByPaymentId(con, n);
+                            String paymentType = com.ouyangjie.model.Payment.findByPaymentId(con, n);
                         %>
                         <p class="cart_total_price"><%=paymentType %>
                         </p>
                     </td>
                     <td>
-                        <button class="btn btn-default update" id="${o.orderId }">Details</button>
+                        <button class="btn btn-default update" id="${o.orderId}">Details</button>
                     </td>
                 </tr>
                 <tr>
-
+                    </C:forEach>
                     <!-- loop_end -->
 
                 </tbody>
